@@ -1,17 +1,25 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+﻿<ion-header>
+                                                                                       <!-- clientId 변경해줘야 함-->
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=yDIuTKSd_AOmop02nuqs"></script>
+
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <div>
+    <ion-item>
+      <ion-input type="text" placeholder="Search For Address" [(ngModel)]="place"></ion-input>
+      <button item-right ion-button color="secondary" (click)="searchPlace()">
+        serach
+      </button>
+    </ion-item>
+    <ion-item>
+      <button ion-button color="danger" (click)="delMarker()">
+        del Marker
+      </button>
+      <button item-right ion-button color="danger" (click)="startNav()">
+        START
+      </button>
+    </ion-item>
+  </div>
+  <div id="map" style="width:100%; height:95%;"></div>
 </ion-content>
