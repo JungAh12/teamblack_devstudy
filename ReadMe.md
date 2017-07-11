@@ -71,10 +71,11 @@ geocode()를 이용해 주소를 좌표로 변환해온다.
 ### 마커 생성하기
 
 마커 생성은 간단함
-    marker[2] = new naver.maps.Marker({         
-               position: point,                    
-               map: map
-    });
+
+  marker[2] = new naver.maps.Marker({        
+              position: point,                    
+              map: map
+  });
 
 이런식으로 마커를 생성한다.
 현재 총 3개, 주소 검색을 통해 표시한 마커, 지도에서 직접 클릭한 마커 두 개 생성할 수 있다.
@@ -82,6 +83,7 @@ geocode()를 이용해 주소를 좌표로 변환해온다.
 ### 마커 삭제하기
 
 마커 삭제는 delMarker 버튼을 누르면 delMarker() 호출된다.
+
     for (var i = 0; i < marker.length; i++) {
             if (!marker[i]) {}
             else {
