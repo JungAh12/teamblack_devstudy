@@ -71,8 +71,8 @@ geocode()를 이용해 주소를 좌표로 변환해온다.
 ### 마커 생성하기
 
 마커 생성은 간단함
-    marker[2] = new naver.maps.Marker({         //마커 생성
-               position: point,                    //검색한 위치에 마커 생성
+    marker[2] = new naver.maps.Marker({         
+               position: point,                    
                map: map
     });
 
@@ -85,8 +85,8 @@ geocode()를 이용해 주소를 좌표로 변환해온다.
     for (var i = 0; i < marker.length; i++) {
             if (!marker[i]) {}
             else {
-                marker[i].setMap(null);   //마커 사라지게 함.
-                delete marker[i];         //마커 삭제
+                marker[i].setMap(null);   
+                delete marker[i];        
             }
     }
 
